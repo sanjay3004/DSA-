@@ -1,14 +1,15 @@
 import java.util.*;
-public class Main
+public class Greedy
 {
 	public static void main(String[] args) {
-		int[] coin={5,2,1};
+		int[] coin={5,1,2};
+		Arrays.sort(coin);
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the amount: ");
 		int totVal=sc.nextInt();
 		int i,j,val=totVal;
 		System.out.print("The combination is ");
-        for(i=0;i<coin.length;i++){
+        for(i=coin.length-1;i>=0;i--){
             if(val>0){
                 int count=val/coin[i];
                 for(j=0;j<count;j++){
