@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Brute {
+class Quick {
    
    static int flag=0;
 
@@ -37,12 +37,15 @@ class Brute {
 		Scanner sc=new Scanner(System.in);
 		int arr[] = {1, 2, 5};
 		int n = arr.length;
-		int r = 3;
-		int chosen[] = new int[r + 1];
+		int r = 1;
+		
 		int amt;
 		System.out.println("Enter the amount: ");
 		amt=sc.nextInt();
+		while(flag==0){
+		int chosen[] = new int[r + 1];
 		CombinationRepetitionUtil(chosen, arr, 0, r, 0, n - 1,amt);
+		r++;
+		}
 	}
 }
-
