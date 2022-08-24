@@ -21,25 +21,39 @@ class Quick{
     }
     }
     static int partition(int arr[], int begin, int end) {
-    int pivot = arr[end];
-    int i = (begin-1);
-
-    for (int j = begin; j < end; j++) {
-        if (arr[j] <= pivot) {
-            i++;
-
-            int swapTemp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = swapTemp;
-        }
-    }
-
-    int swapTemp = arr[i+1];
-    arr[i+1] = arr[end];
-    arr[end] = swapTemp;
-
-    return i+1;
+        
+        
+        
+     int pivot = arr[end];
+     int j = (end-1);
+     int i=begin;
+     while (i<j){
+         while(arr[i]<pivot && i<end){
+             i++;
+         }
+         while(arr[j]>=pivot && j>begin){
+             j--;
+         }
+         if(i<j){
+             int temp=arr[i];
+             arr[i]=arr[j];
+             arr[j]=temp;
+         }
+     }
+     if(pivot<arr[i]){
+         int temp=arr[i];
+         arr[i]=arr[end];
+         arr[end]=temp;
+     }
+    return i;
+    
 }
+
+    static void swap(int a,int b){
+        int temp=a;
+        a=b;
+        b=temp;
+    }
 
     static void print(int[] a){
         for(int i=0;i<a.length;i++){
@@ -47,5 +61,4 @@ class Quick{
         }
     }
 }
-
 
