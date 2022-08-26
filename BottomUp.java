@@ -9,8 +9,7 @@ public class BottomUp
 		int i,j;
 		int[] a=new int[amt+1];
 		a[0]=0;
-		a[1]=1;
-		for(i=2;i<a.length;i++){
+		for(i=1;i<a.length;i++){
 		    int min=amt+1;
 		    for(j=0;j<arr.length;j++){
 		        if(amt==arr[j]){
