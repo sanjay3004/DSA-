@@ -14,6 +14,6 @@ def minimum_coins(coin_list, change):
     return min_coins, cl
 
 change=int(input("enter the amount"))
-coin_list = [1,3,4,5]
+coin_list = [1,2,5]
 min, c = minimum_coins(coin_list, change)
 print("Total number of coins required is %s." % min, c) 
